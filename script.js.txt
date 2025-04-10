@@ -1,0 +1,17 @@
+function mostrarSeccion(id) {
+  const secciones = document.querySelectorAll('main section');
+
+  // Oculta todas las secciones y les saca la animación
+  secciones.forEach(seccion => {
+    seccion.classList.add('oculto');
+    seccion.classList.remove('visible');
+  });
+
+  // Muestra la nueva sección y activa animación
+  const activa = document.getElementById(id);
+  if (activa) {
+    activa.classList.remove('oculto');
+    setTimeout(() => {
+      activa.classList.add('visible');
+    }, 10); // Delay para que la transición funcione
+  }
