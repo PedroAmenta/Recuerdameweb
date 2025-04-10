@@ -5,60 +5,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Recuérdame</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <div class="logo">👓 RECUÉRDAME</div>
-      <ul class="nav-links">
-        <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
-        <li><a href="#" onclick="mostrarSeccion('proyecto')">El Proyecto</a></li>
-        <li><a href="#" onclick="mostrarSeccion('funciona')">Cómo Funciona</a></li>
-        <li><a href="#" onclick="mostrarSeccion('app')">La App</a></li>
-        <li><a href="#" onclick="mostrarSeccion('equipo')">El Equipo</a></li>
-        <li><a href="#" onclick="mostrarSeccion('ayuda')">Cómo Ayudar</a></li>
-        <li><a href="#" onclick="mostrarSeccion('contacto')">Contacto</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <img src="images/logo-recuerdame.png" alt="Logo Recuérdame" class="logo">
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#proyecto">El Proyecto</a></li>
+          <li><a href="#funciona">Cómo Funciona</a></li>
+          <li><a href="#app">La App</a></li>
+          <li><a href="#equipo">El Equipo</a></li>
+          <li><a href="#ayuda">Cómo Ayudar</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="inicio">
+  <section id="inicio" class="seccion activa hero">
+    <div class="container">
       <h1>Porque recordar también es vivir</h1>
       <p>Una propuesta con corazón para quienes más lo necesitan.</p>
-    </section>
+    </div>
+  </section>
 
-    <section id="proyecto" class="oculto">
+  <section id="proyecto" class="seccion contenido">
+    <div class="container">
       <h2>¿Qué es Recuérdame?</h2>
-      <p>Recuérdame es un proyecto que busca ayudar a personas con Alzheimer a reconocer rostros importantes mediante unos lentes con reconocimiento facial.</p>
-    </section>
+      <p>Recuérdame es un proyecto que busca ayudar a personas con Alzheimer o pérdida de memoria a reconocer los rostros más importantes de su vida, mediante unos lentes con reconocimiento facial que, a través de un sistema de audio, les indican quién tienen enfrente.</p>
+      <p>El sistema incluye una aplicación donde se cargan fotos, nombres, vínculos y preguntas cognitivas que ayudan a estimular la memoria.</p>
+    </div>
+  </section>
 
-    <section id="funciona" class="oculto">
+  <section id="funciona" class="seccion contenido gris">
+    <div class="container">
       <h2>¿Cómo funciona?</h2>
-      <p>El sistema tiene una app donde se cargan fotos, nombres, vínculos y preguntas cognitivas. Los lentes con IA leen la cara y dan la info por audio.</p>
-    </section>
+      <ol>
+        <li>Los lentes detectan un rostro.</li>
+        <li>La app identifica quién es esa persona.</li>
+        <li>Un auricular le dice al usuario: “Él es tu hijo. Se llama Tomás.”</li>
+      </ol>
+      <p>Además, durante el día, el acompañante o cuidador puede activar preguntas como: “¿Recordás el nombre de tus padres?” o “¿Tenés hijos? ¿Cuántos?” para ayudar a mantener activa la memoria.</p>
+    </div>
+  </section>
 
-    <section id="app" class="oculto">
-      <h2>La App</h2>
-      <p>Descripción futura de la app...</p>
-    </section>
+  <section id="app" class="seccion contenido">
+    <div class="container">
+      <h2>La aplicación</h2>
+      <p>Desde la app, los familiares o cuidadores pueden cargar y actualizar:</p>
+      <ul>
+        <li>Fotos y nombres de personas cercanas</li>
+        <li>Relaciones (ej: hija, amigo, nieto)</li>
+        <li>Preguntas para estimular la memoria</li>
+      </ul>
+      <p>La app es sencilla, accesible y está pensada para que cualquiera pueda usarla fácilmente.</p>
+    </div>
+  </section>
 
-    <section id="equipo" class="oculto">
-      <h2>El Equipo</h2>
-      <p>Integrantes del proyecto...</p>
-    </section>
+  <section id="equipo" class="seccion contenido gris">
+    <div class="container">
+      <h2>El equipo</h2>
+      <ul>
+        <li><strong>Pedro Amenta:</strong> Comunicación, redes sociales y marketing</li>
+        <li><strong>Carlos Gabri:</strong> Desarrollo de software</li>
+        <li><strong>Facundo Mendez:</strong> Desarrollo de software y diseño del prototipo</li>
+      </ul>
+    </div>
+  </section>
 
-    <section id="ayuda" class="oculto">
-      <h2>Cómo Ayudar</h2>
-      <p>Formas de apoyar el proyecto...</p>
-    </section>
+  <section id="ayuda" class="seccion contenido">
+    <div class="container">
+      <h2>¿Cómo podés ayudarnos?</h2>
+      <p>Queremos que Recuérdame llegue a muchas personas. Si conocés a alguien que pueda ayudarnos con recursos, difusión o tecnología, contale sobre nosotros.</p>
+      <p>También podés seguirnos en redes, compartir nuestro trabajo o escribirnos para colaborar.</p>
+    </div>
+  </section>
 
-    <section id="contacto" class="oculto">
+  <section id="contacto" class="seccion contenido">
+    <div class="container">
       <h2>Contacto</h2>
-      <p>Mail: recuerdamecpf@gmail.com</p>
-    </section>
-  </main>
+      <p>Si querés saber más o apoyarnos, escribinos:</p>
+      <p><strong>Email:</strong> <a href="mailto:recuerdamecpf@gmail.com">recuerdamecpf@gmail.com</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/recuerdamecpf" target="_blank">@recuerdamecpf</a></p>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Recuérdame. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Script para navegación por secciones -->
+  <script>
+    document.querySelectorAll("nav ul li a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const destino = link.getAttribute("href").substring(1);
+
+        document.querySelectorAll(".seccion").forEach(seccion => {
+          seccion.classList.remove("activa");
+        });
+
+        const seccionActiva = document.getElementById(destino);
+        if (seccionActiva) {
+          seccionActiva.classList.add("activa");
+          window.scrollTo(0, 0);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
