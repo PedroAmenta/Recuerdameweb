@@ -135,4 +135,47 @@ footer {
     margin: 0 auto;
     display: block;
   }
+  .logo {
+  height: 60px;
+  margin-top: 10px;
+}
+
+.fondo-hero {
+  background-image: url("images/fondo_inicio.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.fondo-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.contenido-hero {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 50px 20px;
+  color: white;
+}
+
+.contenido-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.contenido-hero p {
+  font-size: 1.3rem;
+ }
 }
