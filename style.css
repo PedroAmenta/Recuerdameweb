@@ -27,7 +27,9 @@ header {
 }
 
 .logo {
-  width: 160px;
+  height: 70px;        
+  margin-top: 15px;    
+  display: block;
 }
 
 nav ul {
@@ -112,34 +114,6 @@ footer {
   display: block;
 }
 
-@media screen and (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  .hero p {
-    font-size: 2rem;
-  }
-
-  .logo {
-    margin: 0 auto;
-    display: block;
-  }
-  .logo {
-  height: 70px;
-  margin-top: 15px;
-}
-
 .fondo-hero {
   background-image: url("images/fondo_inicio.jpg");
   background-size: cover;
@@ -177,5 +151,25 @@ footer {
 
 .contenido-hero p {
   font-size: 2rem;
- }
 }
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 2rem;
+  }
+}
+
