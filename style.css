@@ -11,7 +11,7 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem 1rem; 
 }
 
 header {
@@ -27,11 +27,8 @@ header {
 }
 
 .logo {
-  height: 300px;        
-  margin-top: 15px;
-  margin-right: -10px;
-  margin-left: -10px;
-  display: block;
+  width: 160px;
+  margin-left: 0;
 }
 
 nav ul {
@@ -53,7 +50,7 @@ nav ul li a {
   font-weight: bold;
   transition: color 0.3s;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.2rem; 
 }
 
 nav ul li a:hover {
@@ -117,6 +114,33 @@ footer {
   display: block;
 }
 
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 2rem;
+  }
+
+  .logo {
+    margin: 0 auto;
+    display: block;
+    height: 70px;
+    margin-top: 15px;
+  }
+}
+
 .fondo-hero {
   background-image: url("images/fondo_inicio.jpg");
   background-size: cover;
@@ -154,25 +178,5 @@ footer {
 
 .contenido-hero p {
   font-size: 2rem;
-}
-
-@media screen and (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  .hero p {
-    font-size: 2rem;
-  }
 }
 
