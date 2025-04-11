@@ -16,13 +16,16 @@ body {
 
 header {
   background-color: #0d1b2a;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap:3rem;
+  padding: 0 1.5rem;
+  width:100%;
   flex-wrap: wrap;
 }
 
