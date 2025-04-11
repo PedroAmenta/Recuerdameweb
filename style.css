@@ -29,7 +29,7 @@ header {
 .logo {
   height: 300px;        
   margin-top: 15px;
-  margin-right: -10px;
+  margin-right: -15px;
   display: block;
 }
 
@@ -52,6 +52,7 @@ nav ul li a {
   font-weight: bold;
   transition: color 0.3s;
   cursor: pointer;
+  font-size: 2rem;
 }
 
 nav ul li a:hover {
