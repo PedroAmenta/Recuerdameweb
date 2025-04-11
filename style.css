@@ -27,9 +27,9 @@ header {
 }
 
 .logo {
-  height: 150px;        
+  height: 300px;        
   margin-top: 15px;
-  margin-right: 0px;
+  margin-right: -10px;
   display: block;
 }
 
