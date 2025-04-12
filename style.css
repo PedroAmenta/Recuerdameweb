@@ -155,11 +155,14 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  height: calc(100vh - 120px);
+  min-height: calc(100vh - 80px); 
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .fondo-hero::before {
@@ -188,3 +191,12 @@ footer {
   font-size: 2rem;
 }
 
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.hero, .contenido-hero {
+  margin: 0;
+  padding: 0;
+}
