@@ -63,7 +63,12 @@ nav ul li a:hover {
 .hero {
   background-color: #caf0f8;
   text-align: center;
-  padding: 4rem 0;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
 }
 
 .hero h1 {
@@ -73,7 +78,7 @@ nav ul li a:hover {
 }
 
 .hero p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #023e8a;
 }
 
