@@ -23,7 +23,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  font-size:4rem;
   gap:3rem;
   padding: 0 1.5rem;
   width:100%;
@@ -31,8 +30,7 @@ header {
 }
 
 .logo {
-  width: 200px;
-  height: auto;
+  width: 160px;
   margin-left: 0;
 }
 
@@ -201,4 +199,3 @@ body, html {
   margin: 0;
   padding: 0;
 }
-
