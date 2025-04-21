@@ -88,6 +88,7 @@ nav ul li a:hover {
 .contenido h2 {
   color: #0077b6;
   margin-bottom: 1rem;
+  font-size: 1.7rem;
 }
 
 .contenido p,
@@ -199,3 +200,31 @@ body, html {
   margin: 0;
   padding: 0;
 }
+
+/* Estilos para la animación hover en el menú dSe navegación */
+nav ul li a.menu__link{
+  color: #fff;
+  line-height: 2;
+  position: relative;
+}
+
+nav ul li a.menu__link::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -.25rem;
+  left: 0;
+  transition: width 1s;
+}
+
+nav ul li a.menu__link:hover::before {
+  width: 100%;
+}
+
+
+
+
+
