@@ -1,9 +1,13 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
   line-height: 1.6;
-  background-color: #ffffff;
+  background-image: url("images/textura.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  width: 100%;
   color: #333;
 }
 
@@ -11,19 +15,19 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem; 
+  padding: 0.5rem 1rem; 
 }
 
 header {
   background-color: #0d1b2a;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .header-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap:3rem;
+  gap:2rem;
   padding: 0 1.5rem;
   width:100%;
   flex-wrap: wrap;
@@ -60,19 +64,14 @@ nav ul li a:hover {
   color: #00b4d8;
 }
 
-.hero {
-  background-color: #caf0f8;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.hero {     
+  min-height: calc(100vh - 180px);
   padding: 0 1rem;
 }
 
 .hero h1 {
   font-size: 3.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: -1rem;
   color: #023e8a;
 }
 
@@ -82,7 +81,7 @@ nav ul li a:hover {
 }
 
 .contenido {
-  padding: 3rem 0;
+  padding: 8rem; 
 }
 
 .contenido h2 {
@@ -93,7 +92,7 @@ nav ul li a:hover {
 
 .contenido p,
 .contenido li {
-  font-size: 1.5rem;
+  font-size: 1,5rem;
   margin-bottom: 1rem;
 }
 
@@ -102,16 +101,13 @@ nav ul li a:hover {
   padding-left: 2rem;
 }
 
-.contenido.gris {
-  background-color: #f1f1f1;
-}
-
 footer {
   background-color: #0d1b2a;
   color: #ffffff;
   text-align: center;
   padding: 1.5rem 0;
   font-size: 0.9rem;
+  margin-bottom: 0%;
 }
 
 .seccion {
@@ -120,7 +116,80 @@ footer {
 
 .seccion.activa {
   display: block;
+  display: flex;
+  align-items: center;
+  animation: fadeSlide 1.1s ease-in-out;
 }
+
+.patrocinadores {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.patroh1 {
+  font-size: 3.2rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #023e8a;
+  max-width: 100%;
+  padding-top: 100px;
+  opacity: 1; /* Visible inicialmente */
+  animation-fill-mode: both;
+}
+
+.patrop {
+  font-size: 2rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: -25px;
+  max-width: 100%;
+  opacity: 1; /* Visible inicialmente */
+  animation-fill-mode: both;
+}
+
+.fadesatxt strong {
+  color: #0056b3; 
+  font-weight: bold;
+}
+
+.fadesatxt {
+  display: block; 
+  text-align: left; 
+  align-items: left;
+  max-width: 45%;
+  float: left;
+  font-size: 2rem;
+  padding-top: 100px;
+  view-timeline-name: --reveal;
+  animation-name: show;
+  animation-fill-mode: both;
+  animation-timeline: --reveal;
+  animation-range: entry 25% cover 50%;
+}
+
+.logofadesa {
+  float: right;
+  padding-top: 200px;
+  view-timeline-name: --reveal;
+  animation-name: show;
+  animation-fill-mode: both;
+  animation-timeline: --reveal;
+  animation-range: entry 25% cover 50%;
+}
+
+.botonfadesa {
+  float: right;
+  margin-top: 50px;
+  margin-right: 80px;
+  view-timeline-name: --reveal;
+  animation-name: show;
+  animation-fill-mode: both;
+  animation-timeline: --reveal;
+  animation-range: entry 25% cover 50%;
+ }
 
 @media screen and (max-width: 768px) {
   .header-container {
@@ -149,56 +218,23 @@ footer {
   }
 }
 
-.fondo-hero {
-  background-image: url("images/fondo_inicio.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  min-height: calc(100vh - 80px); 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.fondo-hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-.contenido-hero {
-  position: relative;
-  z-index: 2;
+.contenido-inicio {
   text-align: center;
-  padding: 50px 20px;
-  color: white;
+  padding-left: 15%;
 }
 
-.contenido-hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
+.contenido-inicio h1 {
+  font-size: 4rem;
+  margin-bottom: -35px;
 }
 
-.contenido-hero p {
-  font-size: 2rem;
+.contenido-inicio p {
+  font-size: 2.5rem;
 }
 
 body, html {
   height: 100%;
   overflow-x: hidden;
-}
-
-.hero, .contenido-hero {
-  margin: 0;
-  padding: 0;
 }
 
 /* Estilos para la animación hover en el menú dSe navegación */
@@ -223,6 +259,72 @@ nav ul li a.menu__link::before {
 nav ul li a.menu__link:hover::before {
   width: 100%;
 }
+
+
+button {
+  height: 70px;
+  width: 300px;
+  padding: 10px 25px;
+  border: unset;
+  border-radius: 15px;
+  color: #023e8a;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 20px;
+  -webkit-box-shadow: 4px 8px 19px -3px #0d1b2a(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px #0d1b2a(0,0,0,0.27);
+  transition: all 500ms;
+  overflow: hidden;
+ }
+ 
+ button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #0d1b2a;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px #0d1b2a(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px #0d1b2a(0,0,0,0.27);
+  transition: all 500ms
+ }
+ 
+ button:hover {
+  color: #e8e8e8;
+ }
+ 
+ button:hover::before {
+  width: 100%;
+ }
+
+ @keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes show { 
+  from { 
+    opacity: 0; scale: 10%; 
+  }
+  to { 
+    opacity: 1; scale: 100%; 
+  } 
+}
+
+
+
+
 
 
 
