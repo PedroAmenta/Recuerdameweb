@@ -6,6 +6,8 @@
   <title>Recuérdame</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 <body>
   <header>
@@ -14,24 +16,24 @@
     <nav>
       <ul>
         <li><a class="menu__link" href="#inicio">Inicio</a></li>
-        <li><a class="menu__link" href="#proyecto">El Proyecto</a></li>
         <li><a class="menu__link" href="#funciona">Cómo Funciona</a></li>
         <li><a class="menu__link" href="#app">La App</a></li>
         <li><a class="menu__link" href="#equipo">El Equipo</a></li>
-        <li><a class="menu__link" href="#ayuda">Cómo Ayudar</a></li>
+        <li><a class="menu__link" href="#patrocinadores">Patrocinadores</a></li>
+        <li><a class="menu__link" href="#ayuda">Cómo Ayudarnos</a></li>
         <li><a class="menu__link" href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+<main>
  <section id="inicio" class="seccion activa hero">
-  <div class="fondo-hero">
-    <div class="contenido-hero">
-      <h1>Porque recordar también es vivir</h1>
+    <div class="contenido-inicio">
+      <h1>Porque cada rostro merece ser recordado.</h1>
       <p>Una propuesta con corazón para quienes más lo necesitan.</p>
+      <button onclick="irAProyecto()">¿Que es Recuérdame?</button>
     </div>
-  </div>
 </section>
 
   <section id="proyecto" class="seccion contenido">
@@ -75,6 +77,16 @@
         <li><strong>Carlos Gabri:</strong> Desarrollo de software y aplicacion.</li>
         <li><strong>Facundo Mendez:</strong> Desarrollo de software y diseño del prototipo</li>
       </ul>
+    </div> 
+  </section>
+
+  <section id="patrocinadores" class="seccion patrocinadores">
+    <div class="container">
+      <h1 class="patroh1">Gracias a quienes apoyan nuestro proyecto</h1>
+      <p class="patrop">En Recuérdame estamos orgullosos de contar con el apoyo de organizaciones que comparten nuestra visión de mejorar la calidad de vida a través de la innovación. Su respaldo hace posible que sigamos creciendo.</p>
+      <p class="fadesatxt"><strong>FADESA</strong> es una institución sin fines de lucro que impulsa la investigación, la docencia y la capacitación de recursos humanos en el campo de la salud, aplicando biotecnología de vanguardia. Desde 1993 desarrolla tecnologia directamente vinculada con la salud y promueve campañas de prevención sanitaria, contribuyendo a mejorar la calidad de vida de las personas. En este caso, esta trabajando junto a Recuérdame para el financiamiento del proyecto</p> 
+      <img src="images/logo-fadesa.png" class="logofadesa">
+      <button onclick="irAFadesa()" class="botonfadesa">Conoce FADESA</button>
     </div>
   </section>
 
@@ -94,6 +106,7 @@
       <p><strong>Instagram:</strong> <a href="https://instagram.com/recuerdamecpf" target="_blank">@recuerdamecpf</a></p>
     </div>
   </section>
+</main>
 
   <footer>
     <div class="container">
@@ -120,5 +133,6 @@
       });
     });
   </script>
+  <script src="script.js"></script>
 </body>
 </html>
