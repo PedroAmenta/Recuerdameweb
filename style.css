@@ -3,15 +3,12 @@ body {
   line-height: 1.6;
   background-image: url("images/textura.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   margin: 0;
   width: 100%;
   height: 100%;
-  color: #333;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display:  grid;
+  grid-template-rows: 1fr 6fr 1fr ;
 }
 
 body, html {
@@ -42,29 +39,28 @@ nav ul li a {
   font-size: 1.2rem; 
 }
 
-.logo {
-  width: 200px;
-  height: 200px;
-  margin-left: 0;
+.logo { 
+  width: 160px; 
 }
+
 
 header {
-  background-color: #0d1b2a;
-  padding: 1.5rem 0;
-  grid-row: 1; /* Mantiene el header arriba */
-}
-
-.header-container {
+  background-color: transparent;
+  color: #023e8a;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width:100%;
+  justify-content: space-between; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  width: 100%;
   flex-wrap: wrap;
+  border-bottom: 0.5px solid #023e8a; /* Línea de separación */
 }
 
 main {
   grid-row: 2;
-  place-content: center;
+  display: flex;
+  align-items: center; /* Centra horizontalmente */
+  align-content: center;
+  justify-content: center;
 }
 
 h1 {
@@ -74,18 +70,9 @@ h1 {
 }
 
 h2 {
-  color: #0077b6;
+  color: #023e8a;
   margin-bottom: 1rem;
   font-size: 1.7rem;
-}
-
-p, li {
-  font-size: 1,5rem;
-  margin-bottom: 1rem;
-}
-
-ol, ul {
-  padding-left: 2rem;
 }
 
 .seccion {
@@ -102,15 +89,12 @@ ol, ul {
 .contenido-inicio {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra el contenido verticalmente */
   align-items: center; /* Centra horizontalmente */
-  text-align: center;
-  place-items: center;
+  align-content: center;
 }
 
 .contenido-inicio h1 {
   font-size: 4rem;
-  margin-bottom: -35px;
 }
 
 .contenido-inicio p {
@@ -118,42 +102,69 @@ ol, ul {
 }
 
 .contenido-proyecto {
-  width: 90%;
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 0.5rem 1rem; 
+}
+
+.contenido-proyecto h2 {
+  font-size: 250%;
+  font-family: 'Urbanist'
+}
+
+.contenido-proyecto p {
+  font-size: 160%;
 }
 
 .contenido-funciona{
-  width: 90%;
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 0.5rem 1rem; 
+}
+
+.contenido-funciona h2 {
+  font-size: 250%;
+}
+
+.contenido-funciona p, .contenido-funciona li {
+  font-size: 160%;
 }
 
 .contenido-app{
-  width: 90%;
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 0.5rem 1rem; 
+}
+
+.contenido-app h2 {
+  font-size: 250%;
+}
+
+.contenido-app p, .contenido-app li {
+  font-size: 160%;
 }
 
 .contenido-equipo{
-  width: 90%;
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 0.5rem 1rem; 
 }
 
+.contenido-equipo h2 {
+  font-size: 250%;
+}
+
+.contenido-equipo p, .contenido-equipo li {
+  font-size: 160%;
+}
+
 .contenido-patrocinadores{
-  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.5rem 1rem; 
 }
 
 .patrocinadores {
-  padding-top: 70px;
   padding-bottom: 70px;
 }
 
@@ -166,7 +177,7 @@ ol, ul {
   color: #023e8a;
   max-width: 100%;
   padding-top: 100px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   opacity: 1; /* Visible inicialmente */
   animation-fill-mode: both;
 }
@@ -220,31 +231,31 @@ ol, ul {
  }
 
  .contenido-ayuda{
-  width: 90%;
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 0.5rem 1rem; 
+}
+
+.contenido-ayuda h2 {
+  font-size: 250%;
+}
+
+.contenido-ayuda p {
+  font-size: 160%;
 }
 
 .contenido-contacto{
-  width: 90%;
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
   padding: 0.5rem 1rem; 
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #0d1b2a;
-  color: #ffffff;
-  padding: 1.5rem 0;
-  text-align: center;
-  font-size: 0.9rem;
-  z-index: 1000;
-  grid-row: 3; /* Mantiene el footer fijo abajo */
+.contenido-contacto h2 {
+  font-size: 250%;
+}
+
+.contenido-contacto p, .contenido-contacto li {
+  font-size: 160%;
 }
 
 @media screen and (max-width: 768px) {
@@ -276,7 +287,7 @@ footer {
 
 /* Estilos para la animación hover en el menú dSe navegación */
 nav ul li a.menu__link{
-  color: #fff;
+  color: #023e8a;
   line-height: 2;
   position: relative;
 }
@@ -286,7 +297,7 @@ nav ul li a.menu__link::before {
   width: 0;
   height: 2px;
   border-radius: 2px;
-  background-color: #fff;
+  background-color: #023e8a;
   position: absolute;
   bottom: -.25rem;
   left: 0;
@@ -372,4 +383,3 @@ button {
     padding: 3rem;
   }
 }
-
