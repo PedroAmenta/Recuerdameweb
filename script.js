@@ -30,10 +30,3 @@ function irAFadesa() {
   window.location.href = url; // Redirige al enlace especificado
   window.open(url, "_blank");
 }
-
-
-
-
-
-
-
