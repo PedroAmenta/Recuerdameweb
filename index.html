@@ -9,78 +9,115 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <header>
-    <img src="images/logo-recuerdame.png" class="logo" alt="logo">
+    <img id="dynamic-logo" src="images/casa.png" alt="logo" class="logo">
   <div class="header-container">
     <nav>
-      <ul>
+      <ul class="menu">
         <li><a class="menu__link" href="#inicio">Inicio</a></li>
-        <li><a class="menu__link" href="#funciona">Cómo Funciona</a></li>
         <li><a class="menu__link" href="#app">La App</a></li>
-        <li><a class="menu__link" href="#equipo">El Equipo</a></li>
+        <li><a class="menu__link" href="#equipo">Nosotros</a></li>
         <li><a class="menu__link" href="#patrocinadores">Patrocinadores</a></li>
-        <li><a class="menu__link" href="#ayuda">Cómo Ayudarnos</a></li>
         <li><a class="menu__link" href="#contacto">Contacto</a></li>
         </ul>
       </nav>
     </div>
-    <div class=""></div>
+    <div class="logo"></div>
   </header>
 
 <main>
- <section id="inicio" class="seccion activa hero">
-    <div class="contenido-inicio">
-      <h1>Porque cada rostro merece ser recordado.</h1>
-      <p>Una propuesta con corazón para quienes más lo necesitan.</p>
-      <button onclick="irAProyecto()">¿Que es Recuérdame?</button>
-    </div>
+<section id="inicio" class="seccion activa hero">
+  <div class="observador-inicio"></div>
+  <div class="contenido-inicio">
+    <h1>Porque cada rostro merece ser recordado.</h1>
+    <p>Una propuesta con corazón para quienes más lo necesitan.</p>
+    <button onclick="irAProyecto()">¿Qué es Recuérdame?</button>
+  </div>
+   <div class="linea-con-icono">
+    <hr>
+    <img src="images/logo-recuerdame.png" alt="icono" class="icono-separador">
+    <hr>
+   </div>
+  <div id="proyecto" class="contenido-proyecto">
+   <h2>Somos Recuérdame</h2>
+    <p>Recuérdame es un proyecto desarrollado por tres estudiantes de 7mo año de la E.E.S.T. N.º 7 de Quilmes, nacido desde la empatía y el deseo de generar un impacto real en la vida de quienes enfrentan una de las enfermedades más dolorosas: el Alzheimer y otros trastornos de la memoria.</p>
+    <p>Sabemos lo difícil que puede ser ver cómo una persona querida comienza a olvidar momentos, lugares y <strong>rostros</strong>. Por eso, decidimos aportar nuestra creatividad, conocimientos y compromiso para diseñar una herramienta que ayude a quienes padecen estas enfermedades a reconectar con su entorno y, sobre todo, con sus vínculos más importantes.</p>
+    <p>Nuestro objetivo no es curar, pero sí acompañar. A través de Recuérdame, buscamos que cada día tenga un poco más de claridad, que cada encuentro sea una oportunidad para reconocer, sonreír y recordar. Porque detrás de cada rostro hay una historia, y detrás de cada historia, un lazo que vale la pena mantener vivo.</p>
+  </div>
+     <div class="linea-con-icono">
+    <hr>
+    <img src="images/logo-recuerdame.png" alt="icono" class="icono-separador">
+    <hr>
+   </div>
+  <div class="contenido-funciona">
+   <h2>¿Cómo funciona?</h2>
+     <p>En Recuérdame, combinamos la tecnología y la empatía con el fin de ayudar a todos nuestros usuarios.</p>
+     <p>El dispositivo principal es un par de lentes inteligentes que integran un microprocesador <strong>Raspberry Pi Zero 2</strong> y un <strong>módulo de cámara Raspberry</strong>, conectados a nuestra aplicación. Este sistema cuenta con un software de reconocimiento facial que, al detectar un rostro, lo compara con una base de datos previamente cargada por un familiar o cuidador en la aplicación.</p>
+     <p>Cuando el usuario mira a alguien, la cámara capta ese rostro y lo envía al micro, donde se analiza en tiempo real. Si el rostro es identificado, el sistema reproduce un mensaje de audio que dice, por ejemplo:
+      <strong>“Ella es tu hija. Se llama Camila.”</strong></p>
+     <p>Durante la fase de prototipo, el audio se transmite a través de un auricular Bluetooth conectado a la Raspberry, aunque en futuras versiones el objetivo es que los lentes cuenten con un sistema de audio integrado para mejorar la experiencia de uso.</p>
+     <p>Además, desde la aplicación se puede acceder a una sección con preguntas y actividades de estimulación cognitiva sugeridas por nuestro equipo. Estas propuestas, recomendadas por profesionales, están pensadas para que el acompañante las realice junto a la persona, con el objetivo de mantener activa la mente y ayudar a retrasar el avance de la enfermedad.</p>
+     <p>Así, en Recuérdame no solo ayudamos a reconocer rostros, sino que también buscamos sostener los lazos más valiosos de la vida, incluso cuando los recuerdos empiezan a desvanecerse.</p>
+  </div>
 </section>
 
-  <section id="proyecto" class="seccion contenido">
-    <div class="contenido-proyecto">
-      <h2>Somos Recuérdame</h2>
-      <p>Recuérdame es un proyecto que busca ayudar a personas con Alzheimer o pérdida de memoria a reconocer los rostros más importantes de su vida, mediante unos lentes con reconocimiento facial que, a través de un sistema de audio, les indican quién tienen enfrente.</p>
-      <p>El sistema incluye una aplicación donde se cargan fotos, nombres, vínculos y preguntas especialmente seleccionadas por profesionales, pensadas para estimular la memoria y contribuir a retrasar el avance de enfermedades de estas características.</p>
-    </div>
-  </section>
-
-  <section id="funciona" class="seccion contenido gris">
-    <div class="contenido-funciona">
-      <h2>¿Cómo funciona?</h2>
-      <ol>
-        <li>Los lentes detectan un rostro.</li>
-        <li>La app identifica quién es esa persona.</li>
-        <li>Un auricular le dice al usuario: “Ella es tu hija. Se llama Camila.”</li>
-      </ol>
-      <p>Además, durante el día, el acompañante o cuidador puede activar preguntas como: “¿Recordás el nombre de tus padres?” o “¿Tenés hijos? ¿Cuántos?” para ayudar a mantener activa la memoria.</p>
-    </div>
-  </section>
-
-  <section id="app" class="seccion contenido">
-    <div class="contenido-app">
+<section id="app" class="seccion contenido">
+  <div class="contenido-app">
+      <div class="app-txt">
       <h2>La aplicación</h2>
-      <p>Desde la app, los familiares o cuidadores pueden cargar y actualizar:</p>
+      <p>La app de Recuérdame fue pensada para ser simple, intuitiva y útil para personas de cualquier edad. Desde allí, los familiares o cuidadores pueden:</p>
       <ul>
-        <li>Fotos y nombres de personas cercanas</li>
-        <li>Parentezco (ej: hija, amigo, nieto)</li>
-        <li>Configurar/Activar preguntas especialmente seleccionadas por profesionales para estimular la memoria y ayudar a retrasar el avance del Alzheimer u otras enfermedades que afecten a la memoria </li>
+        <li><strong>Cargar y gestionar rostros:</strong> Al ingresar por primera vez, se pedirá registrar tu rostro, nombre y vínculo con la persona que acompaña un proceso de deterioro de la memoria. Luego podrás cargar nuevos rostros fácilmente: solo necesitás una foto clara, el nombre o apodo, y el parentezco con la persona.</li>
+        <li><strong>Estimulación cognitiva:</strong> Desde la aplicación vas a poder acceder a una sección con preguntas y actividades especialmente seleccionadas por profesionales. Estas propuestas están pensadas para ejercitar la memoria, fomentar el diálogo y mantener activa la mente, siendo una de las herramientas más efectivas para ayudar a retrasar el avance de la enfermedad.</li>
       </ul>
-      <p>La app es sencilla, accesible y está pensada para que cualquiera pueda usarla fácilmente.</p>
+      <p>La app está diseñada para que cualquier persona pueda usarla sin complicaciones, aportando una herramienta más en el día a día del acompañamiento y el cuidado.</p>
+      </div>
+      <div><img src="images/app-mockup.png" alt="Mockup de la app" class="app-img"></div>
     </div>
   </section>
 
-  <section id="equipo" class="seccion contenido gris">
-    <div class="contenido-equipo">
-      <h2>El equipo</h2>
-      <ul>
-        <li><strong>Pedro Amenta:</strong> Comunicación, redes sociales, marketing y desarrollo de pagina web.</li>
-        <li><strong>Carlos Gabri:</strong> Desarrollo de software y aplicacion.</li>
-        <li><strong>Facundo Mendez:</strong> Desarrollo de software y diseño del prototipo</li>
-      </ul>
-    </div> 
-  </section>
+<section id="equipo" class="seccion contenido gris">
+  <h2 class="equipo-h2"><span>Te presentamos al equipo de Recuérdame.</span></h2>
+  <div class="contenido-equipo">
+    <div class="tarjeta-equipo">
+      <div class="miembro">
+        <img src="/images/Carlos.jpg" alt="Carlos Gabri">
+        <div class="info">
+          <h3>Programación:</h3>
+          <p>Desarrollo de software y aplicación</p>
+        </div>
+      </div>
+      <p class="nombre">Carlos Gabri</p>
+    </div>
+
+    <div class="tarjeta-equipo">
+      <div class="miembro">
+        <img src="/images/Pedro.jpg" alt="Pedro Amenta">
+        <div class="info">
+          <h3>Marketing:</h3>
+          <p>Redes sociales, desarrollo web y aplicación</p>
+        </div>
+      </div>
+      <p class="nombre">Pedro Amenta</p>
+    </div>
+
+    <div class="tarjeta-equipo">
+      <div class="miembro">
+        <img src="/images/Facundo.jpg" alt="Facundo Mendez">
+        <div class="info">
+          <h3>Diseño:</h3>
+          <p>Diseño y ensamblado de los lentes</p>
+        </div>
+      </div>
+      <p class="nombre">Facundo Mendez</p>
+    </div>
+  </div>
+  <p class="equipo-p">Somos tres estudiantes apasionados por la tecnología, el diseño y el impacto social. Cada uno aporta desde su especialidad para hacer de Recuérdame una realidad.</p>
+</section>
+
 
   <section id="patrocinadores" class="seccion patrocinadores">
     <div class="contenido-patrocinadores">
@@ -94,25 +131,61 @@
     </div>
   </section>
 
-  <section id="ayuda" class="seccion contenido">
-    <div class="contenido-ayuda">
-      <h2>¿Cómo podés ayudarnos?</h2>
-      <p>Queremos que Recuérdame llegue a muchas personas. Si conocés a alguien que pueda ayudarnos con recursos, difusión o tecnología, contale sobre nosotros.</p>
-      <p>También podés seguirnos en redes, compartir nuestro trabajo o escribirnos para colaborar.</p>
-    </div>
-  </section>
+<section id="contacto" class="seccion contenido">
+  <div class="contenido-contacto">
+    <h2>Contacto</h2>
 
-  <section id="contacto" class="seccion contenido">
-    <div class="contenido-contacto">
-      <h2>Contacto</h2>
-      <p>Si querés saber más o apoyarnos, escribinos:</p>
-      <p><strong>Email:</strong> <a href="mailto:recuerdamecpf@gmail.com">recuerdamecpf@gmail.com</a></p>
-      <p><strong>Instagram:</strong> <a href="https://instagram.com/recuerdamecpf" target="_blank">@recuerdamecpf</a></p>
-    </div>
-  </section>
+    <p class="frase-contacto">¡Sumate a cambiar vidas con tecnología!</p>
+    <p>📍 Nacido en Quilmes, pensado para todos.</p>
+
+    <p>Si querés saber más o apoyarnos, escribinos:</p>
+
+    <p><strong>📧 Email:</strong> <a href="mailto:recuerdamecpf@gmail.com">recuerdamecpf@gmail.com</a></p>
+    <p><strong>📸 Instagram:</strong> <a href="https://instagram.com/recuerdamecpf" target="_blank">@recuerdamecpf</a></p>
+
+    <hr>
+
+    <form action="https://formspree.io/f/mkgbnqjk" method="POST" class="formulario-contacto">
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" id="nombre" required>
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="mensaje">Mensaje</label>
+      <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
 </main>
 
+
   <script src="script.js"></script>
+
+<footer class="footer" style="background-image: url(/images/Fondo-footer.png); background-size: cover; background-position: center;">
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="/images/logo-footer.png" alt="Logo Recuérdame" class="footer-logo" />
+    </div>
+    <div class="footer-center">
+      <p><strong>Recuérdame.</strong> Tecnología con propósito.</p>
+    </div>
+    <div class="footer-right">
+      <ul class="footer-nav">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#app">La App</a></li>
+        <li><a href="#equipo">Nosotros</a></li>
+        <li><a href="#patrocinadores">Patrocinadores</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Recuérdame · Todos los derechos reservados.
+  </div>
+</footer>
 
 </body>
 </html>
