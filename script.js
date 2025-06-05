@@ -16,6 +16,14 @@ document.querySelectorAll("nav ul li a").forEach(link => {
   });
 });
 
+// Toggle menu celu
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
 const logo = document.getElementById("dynamic-logo");
 
 // Función para cambiar el logo con efecto de desvanecimiento
