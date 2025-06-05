@@ -67,6 +67,70 @@ menu {
   justify-content: center; /* Centra horizontalmente */
 }
 
+/* Menú tres rayitas (invisible en compu) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #023e8a;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* Menu de celu */
+@media (max-width: 768px) {
+  nav ul.menu {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: #e3f2fd;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  z-index: 1000;
+  border-top: 1px solid #023e8a;
+}
+
+nav ul.menu.active {
+  max-height: 500px; 
+  opacity: 1;
+  padding: 10px 0;
+}
+
+  nav ul.menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  header {
+    flex-wrap: nowrap;
+    position: relative;
+  }
+
+  .header-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
 main {
   grid-row: 2;
   align-items: center; /* Centra horizontalmente */
