@@ -848,7 +848,8 @@ button {
     padding: 0 1rem;
   }
 
-  .fadesatxt {
+  .fadesatxt,
+  .pctxt {
     float: none;
     display: block;
     width: 100%;
@@ -858,7 +859,8 @@ button {
     padding-top: 6rem;
   }
 
-  .logofadesa {
+  .logofadesa,
+  .logopc {
     float: none;
     display: block;
     margin: 2rem auto;
@@ -867,7 +869,8 @@ button {
     max-width: 300px;
   }
 
-  .botonfadesa {
+  .botonfadesa,
+  .botonpc {
     float: none;
     display: block;
     margin: 2rem auto 0 auto;
@@ -883,6 +886,7 @@ button {
     justify-content: center;
   }
 }
+
 
 
 
