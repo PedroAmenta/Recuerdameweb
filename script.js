@@ -140,6 +140,11 @@ function irAFadesa() {
   window.open(url, "_blank");
 }
 
+function irAProyectoColor() {
+  const url = "https://proyectocolor.com.ar/"; 
+  window.open(url, "_blank");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector(".footer");
 
