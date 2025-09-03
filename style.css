@@ -439,8 +439,42 @@ h2 {
 .botonfadesa {
   float: right;
   margin-top: 50px;
-  margin-right: 80px;
+  margin-right: 4rem;
  }
+
+ .pctxt strong { color: #0056b3; }
+
+.pctxt {
+  display: block;
+  text-align: left;
+  align-items: left;
+  max-width: 45%;
+  float: left;
+  font-size: 1.6rem;
+  padding-top: 15rem;
+  view-timeline-name: --reveal;
+  animation-name: show;
+  animation-fill-mode: both;
+  animation-timeline: --reveal;
+  animation-range: entry 25% cover 50%;
+}
+
+.logopc {
+  float: right;
+  padding-top: 15rem;
+  view-timeline-name: --reveal;
+  animation-name: show;
+  animation-fill-mode: both;
+  animation-timeline: --reveal;
+  animation-range: entry 25% cover 50%;
+  width: 400px;
+}
+
+.botonpc {
+  float: right;
+  margin-top: 50px;
+  margin-right: 3.9rem;
+}
 
 .contenido-contacto{
   max-width: 80%;
@@ -849,5 +883,6 @@ button {
     justify-content: center;
   }
 }
+
 
 
